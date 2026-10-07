@@ -15,3 +15,9 @@ $('#process-list').innerHTML=d.process.map(p=>`<div class="step"><b>${p.number}<
 $('#gallery-grid').innerHTML=d.gallery.map((x,i)=>`<a href="${x}" target="_blank" rel="noopener"><img src="${x}" alt="Ádám Sándor Fotós – gyermekfotó ${i+1}"></a>`).join('');
 $('#faq-list').innerHTML=d.faq.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('');
 })();
+fetch('content/site.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(d => {
+    document.querySelector('.brand b').textContent = d.site.name;
+    document.querySelector('.brand small').textContent = d.site.role;
+  });
