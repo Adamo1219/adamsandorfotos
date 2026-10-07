@@ -1,14 +1,11 @@
 backend:
-  name: github
-  repo: SAJAT_GITHUB_FELHASZNALONEV/SAJAT_REPO
+  name: turbo-github
+  turbo_site_id: 63f9f4d3-b052-4ff8-a734-76a08d5ec411
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: api/v1/oauth/auth
-
 media_folder: "images"
 public_folder: "/images"
 locale: "hu"
-site_url: "https://SAJAT-DOMAIN.hu"
+site_url: "https://adamo1219.github.io/adamsandorfotos/"
 
 collections:
   - name: "site"
