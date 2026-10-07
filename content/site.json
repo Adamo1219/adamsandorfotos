@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Ádám Sándor",
-    "role": "FOTÓS",
+    "role": "FOTÓS-TEXT",
     "tagline": "GYERMEKFOTÓZÁS CSALÁDOKNAK",
     "email": "sandor.adam9@gmail.com"
   },
@@ -26,16 +26,16 @@
       "image": "images/gyermekfotozas.png"
     },
     {
-      "number": "02",
-      "title": "DIGITÁLIS HÁTTÉRCSERE",
-      "lead": "1 db kép kreatív kidolgozása",
-      "text": "A gyermek fotójából egyedi, látványos kép készülhet digitális háttércserével.",
       "price": "…… Ft",
-      "image": "images/fiu-utana.jpg",
-      "before": "images/fiu-elotte.png",
-      "after": "images/fiu-utana.jpg",
+      "number": "02",
+      "text": "A gyermek fotójából egyedi, látványos kép készülhet digitális háttércserével.",
       "before2": "images/kislany-elotte.png",
-      "after2": "images/kislany-utana.jpg"
+      "after2": "images/kislany-utana.jpg",
+      "title": "DIGITÁLIS HÁTTÉRCSERE",
+      "image": "images/fiu-utana.jpg",
+      "after": "images/fiu-utana.jpg",
+      "lead": "1 db kép kreatív kidolgozása",
+      "before": "images/fiu-elotte.png"
     },
     {
       "number": "03",
@@ -47,10 +47,26 @@
     }
   ],
   "process": [
-    {"number":"01","title":"BESZÉLGETÜNK","text":"Rövid e-mail vagy telefon: hány gyerekről van szó, mennyi idősek, mit szeretnek, mitől félnek. Ez alapján a helyszínen már nem kell találgatnom."},
-    {"number":"02","title":"MEGBESZÉLJÜK A RÉSZLETEKET","text":"Kiválasztjuk a helyszínt és a napszakot, és megbeszéljük, mit szeretnétek."},
-    {"number":"03","title":"FOTÓZUNK","text":"45–90 perc, játékosan, kapkodás nélkül. Ha a gyerek megéhezik, elfárad vagy éppen nincs kedve együttműködni, az is belefér. Szünetet tartunk, aztán tovább játszunk."},
-    {"number":"04","title":"ELKÉSZÜLNEK A KÉPEK","text":"Először egy válogatást látsz, kiválasztod a kedvenceidet, majd megkapod a gondosan kidolgozott képeket digitális formában, teljes felbontásban."}
+    {
+      "number": "01",
+      "title": "BESZÉLGETÜNK",
+      "text": "Rövid e-mail vagy telefon: hány gyerekről van szó, mennyi idősek, mit szeretnek, mitől félnek. Ez alapján a helyszínen már nem kell találgatnom."
+    },
+    {
+      "number": "02",
+      "title": "MEGBESZÉLJÜK A RÉSZLETEKET",
+      "text": "Kiválasztjuk a helyszínt és a napszakot, és megbeszéljük, mit szeretnétek."
+    },
+    {
+      "number": "03",
+      "title": "FOTÓZUNK",
+      "text": "45–90 perc, játékosan, kapkodás nélkül. Ha a gyerek megéhezik, elfárad vagy éppen nincs kedve együttműködni, az is belefér. Szünetet tartunk, aztán tovább játszunk."
+    },
+    {
+      "number": "04",
+      "title": "ELKÉSZÜLNEK A KÉPEK",
+      "text": "Először egy válogatást látsz, kiválasztod a kedvenceidet, majd megkapod a gondosan kidolgozott képeket digitális formában, teljes felbontásban."
+    }
   ],
   "gallery": [
     "images/galeria-01.jpg",
@@ -61,12 +77,33 @@
     "images/galeria-06.jpg"
   ],
   "faq": [
-    {"q":"Mennyi időt szánjunk rá?","a":"Számoljatok körülbelül 45–90 perccel, a gyerek életkorától és a helyszíntől függően. A kicsiknél ez gyakran két rövidebb szakaszra bomlik, mert hamarabb elfáradnak."},
-    {"q":"Mi legyen a gyereken?","a":"Valami, amiben jól érzi magát. Az egyszerű színű, kényelmes ruha a legjobb: nem szorít, nem csúszik el, és nem vonja el a figyelmet az arcáról. Több váltásruhát is hozhattok, ha szeretnétek változatosabb képeket."},
-    {"q":"Mi van, ha a gyerek nem működik együtt?","a":"Ez a leggyakoribb dolog a világon, és egyáltalán nem probléma. Nem erőltetem a pózokat, és nem kérem, hogy mosolyogjon. Hagyom, hogy felfedezze a helyszínt, és a képek játék közben készülnek el."},
-    {"q":"Hol fotózunk?","a":"Ott, ahol a gyerek a leginkább otthon van: a lakásban, a kertben, a nagyszülőknél, a kedvenc játszótéren vagy egy olyan helyen, ami hozzátok tartozik. Ha nincs ötletetek, szívesen javaslok néhány helyszínt."},
-    {"q":"Milyen formában kapjuk meg a képeket?","a":"Digitálisan, teljes felbontásban, nyomtatásra is alkalmas méretben. Előtte egy válogatást láttok, és ti választjátok ki, melyik képek készüljenek el végleges formában."},
-    {"q":"Lehet saját, telefonnal készült képet is küldeni?","a":"Igen. A digitális háttércseréhez e-mailben elküldhetitek a gyermek fotóját. Megnézem a képet, és jelzem, hogy alkalmas-e a kívánt végeredményhez."},
-    {"q":"Kérhető nyomtatott kép is?","a":"Igen. A digitális háttércsere mellé kérhető 50 × 40 cm-es, prémium fotópapírra nyomtatott kép, amelyet becsomagolva házhoz is szállítok."}
+    {
+      "q": "Mennyi időt szánjunk rá?",
+      "a": "Számoljatok körülbelül 45–90 perccel, a gyerek életkorától és a helyszíntől függően. A kicsiknél ez gyakran két rövidebb szakaszra bomlik, mert hamarabb elfáradnak."
+    },
+    {
+      "q": "Mi legyen a gyereken?",
+      "a": "Valami, amiben jól érzi magát. Az egyszerű színű, kényelmes ruha a legjobb: nem szorít, nem csúszik el, és nem vonja el a figyelmet az arcáról. Több váltásruhát is hozhattok, ha szeretnétek változatosabb képeket."
+    },
+    {
+      "q": "Mi van, ha a gyerek nem működik együtt?",
+      "a": "Ez a leggyakoribb dolog a világon, és egyáltalán nem probléma. Nem erőltetem a pózokat, és nem kérem, hogy mosolyogjon. Hagyom, hogy felfedezze a helyszínt, és a képek játék közben készülnek el."
+    },
+    {
+      "q": "Hol fotózunk?",
+      "a": "Ott, ahol a gyerek a leginkább otthon van: a lakásban, a kertben, a nagyszülőknél, a kedvenc játszótéren vagy egy olyan helyen, ami hozzátok tartozik. Ha nincs ötletetek, szívesen javaslok néhány helyszínt."
+    },
+    {
+      "q": "Milyen formában kapjuk meg a képeket?",
+      "a": "Digitálisan, teljes felbontásban, nyomtatásra is alkalmas méretben. Előtte egy válogatást láttok, és ti választjátok ki, melyik képek készüljenek el végleges formában."
+    },
+    {
+      "q": "Lehet saját, telefonnal készült képet is küldeni?",
+      "a": "Igen. A digitális háttércseréhez e-mailben elküldhetitek a gyermek fotóját. Megnézem a képet, és jelzem, hogy alkalmas-e a kívánt végeredményhez."
+    },
+    {
+      "q": "Kérhető nyomtatott kép is?",
+      "a": "Igen. A digitális háttércsere mellé kérhető 50 × 40 cm-es, prémium fotópapírra nyomtatott kép, amelyet becsomagolva házhoz is szállítok."
+    }
   ]
 }
