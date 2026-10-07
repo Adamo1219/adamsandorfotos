@@ -1,0 +1,78 @@
+backend:
+  name: github
+  repo: SAJAT_GITHUB_FELHASZNALONEV/SAJAT_REPO
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: api/v1/oauth/auth
+
+media_folder: "images"
+public_folder: "/images"
+locale: "hu"
+site_url: "https://SAJAT-DOMAIN.hu"
+
+collections:
+  - name: "site"
+    label: "Weboldal tartalma"
+    files:
+      - name: "site"
+        label: "Oldal szerkesztése"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Alapadatok"
+            name: "site"
+            widget: "object"
+            fields:
+              - {label: "Név", name: "name", widget: "string"}
+              - {label: "Megnevezés", name: "role", widget: "string"}
+              - {label: "Szakterület", name: "tagline", widget: "string"}
+              - {label: "E-mail", name: "email", widget: "string"}
+          - label: "Nyitó rész"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Kis cím", name: "eyebrow", widget: "string"}
+              - {label: "Főcím", name: "title", widget: "string"}
+              - {label: "Leírás", name: "text", widget: "text"}
+          - label: "Rólam"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Cím", name: "title", widget: "string"}
+              - {label: "Szöveg", name: "text", widget: "text"}
+              - {label: "Fotó", name: "image", widget: "image"}
+          - label: "Szolgáltatások"
+            name: "services"
+            widget: "list"
+            summary: "{{number}} – {{title}}"
+            fields:
+              - {label: "Sorszám", name: "number", widget: "string"}
+              - {label: "Cím", name: "title", widget: "string"}
+              - {label: "Rövid leírás", name: "lead", widget: "string"}
+              - {label: "Leírás", name: "text", widget: "text"}
+              - {label: "Ár", name: "price", widget: "string"}
+              - {label: "Plusz információ", name: "extra", widget: "text", required: false}
+              - {label: "Főkép", name: "image", widget: "image"}
+              - {label: "Előtte 1", name: "before", widget: "image", required: false}
+              - {label: "Utána 1", name: "after", widget: "image", required: false}
+              - {label: "Előtte 2", name: "before2", widget: "image", required: false}
+              - {label: "Utána 2", name: "after2", widget: "image", required: false}
+          - label: "Folyamat"
+            name: "process"
+            widget: "list"
+            summary: "{{number}} – {{title}}"
+            fields:
+              - {label: "Sorszám", name: "number", widget: "string"}
+              - {label: "Cím", name: "title", widget: "string"}
+              - {label: "Szöveg", name: "text", widget: "text"}
+          - label: "Galéria"
+            name: "gallery"
+            widget: "list"
+            field: {label: "Kép", name: "image", widget: "image"}
+          - label: "GYIK"
+            name: "faq"
+            widget: "list"
+            summary: "{{q}}"
+            fields:
+              - {label: "Kérdés", name: "q", widget: "string"}
+              - {label: "Válasz", name: "a", widget: "text"}
