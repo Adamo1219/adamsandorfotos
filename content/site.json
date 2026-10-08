@@ -26,16 +26,16 @@
       "image": "images/gyermekfotozas.png"
     },
     {
-      "price": "…… Ft",
       "number": "02",
-      "text": "A gyermek fotójából egyedi, látványos kép készülhet digitális háttércserével.",
-      "before2": "images/kislany-elotte.png",
-      "after2": "images/kislany-utana.jpg",
       "title": "DIGITÁLIS HÁTTÉRCSERE",
-      "image": "images/fiu-utana.jpg",
-      "after": "images/fiu-utana.jpg",
       "lead": "1 db kép kreatív kidolgozása",
-      "before": "images/fiu-elotte.png"
+      "text": "A gyermek fotójából egyedi, látványos kép készülhet digitális háttércserével.",
+      "price": "…… Ft",
+      "image": "images/fiu-utana.jpg",
+      "before": "images/fiu-elotte.png",
+      "after": "images/fiu-utana.jpg",
+      "before2": "images/kislany-elotte.png",
+      "after2": "images/kislany-utana.jpg"
     },
     {
       "number": "03",
@@ -79,7 +79,7 @@
   "faq": [
     {
       "q": "Mennyi időt szánjunk rá?",
-      "a": "Számoljatok körülbelül 45–90 perccel, a gyerek életkorától és a helyszíntől függően. A kicsiknél ez gyakran két rövidebb szakaszra bomlik, mert hamarabb elfáradnak. "
+      "a": "Számoljatok körülbelül 45–90 perccel, a gyerek életkorától és a helyszíntől függően. A kicsiknél ez gyakran két rövidebb szakaszra bomlik, mert hamarabb elfáradnak."
     },
     {
       "q": "Mi legyen a gyereken?",
