@@ -1,24 +1,92 @@
-window.SITE_DATA = {"site": {"name": "Ádám Sándor", "role": "FOTÓS", "tagline": "GYERMEKFOTÓZÁS CSALÁDOKNAK", "email": "sandor.adam9@gmail.com"}, "hero": {"eyebrow": "GYERMEKFOTÓZÁS CSALÁDOKNAK", "title": "A gyermekkor nem múlik el, ha művé válik.", "text": "Őrizzük meg együtt azokat a pillanatokat, amelyeket évekkel később is jó lesz újra látni."}, "about": {"title": "A pillanatot nem beállítom, hanem megvárom.", "text": "Ádám Sándor vagyok. A fotózás számomra nem egyszerűen egy kép elkészítését jelenti. Azt szeretem, amikor egy fénykép visszaad valamit abból a pillanatból, amit akkor átéltünk.\n\nA gyermekfotózásban különösen ezt keresem: a természetes mosolyt, a játék közbeni pillanatokat, azt az arcot, amit a gyermek akkor mutat, amikor megfeledkezik a fényképezőgépről.\n\nOlyan képeket szeretnék készíteni, amelyeket nemcsak most jó nézni, hanem évek múlva is.", "image": "images/adam.webp"}, "services": [{"number": "01", "title": "GYERMEKFOTÓZÁS", "lead": "Kb. 60 perc fotózás", "text": "15 db gondosan kidolgozott digitális kép.", "price": "…… Ft", "extra": "Kérhető pluszban: 1 db kedvenc kép 50 × 40 cm-es prémium fotópapírra nyomtatva, kiszállítva. Ár: …… Ft", "image": "images/gyermekfotozas.png"}, {"number": "02", "title": "DIGITÁLIS HÁTTÉRCSERE", "lead": "1 db kép kreatív kidolgozása", "text": "A gyermek fotójából egyedi, látványos kép készülhet digitális háttércserével.", "price": "…… Ft", "image": "images/fiu-utana.jpg", "before": "images/fiu-elotte.png", "after": "images/fiu-utana.jpg", "before2": "images/kislany-elotte.png", "after2": "images/kislany-utana.jpg"}, {"number": "03", "title": "DIGITÁLIS HÁTTÉRCSERE + FALIKÉP", "lead": "E-mailben elküldött gyermekfotóból dolgozunk.", "text": "Elkészítem a digitális háttércserét, majd a kész képet 50 × 40 cm-es prémium fotópapírra nyomtatom és kiszállítom.", "price": "…… Ft", "image": "images/falikep.jpg"}], "process": [{"number": "01", "title": "BESZÉLGETÜNK", "text": "Rövid e-mail vagy telefon: hány gyerekről van szó, mennyi idősek, mit szeretnek, mitől félnek. Ez alapján a helyszínen már nem kell találgatnom."}, {"number": "02", "title": "MEGBESZÉLJÜK A RÉSZLETEKET", "text": "Kiválasztjuk a helyszínt és a napszakot, és megbeszéljük, mit szeretnétek."}, {"number": "03", "title": "FOTÓZUNK", "text": "45–90 perc, játékosan, kapkodás nélkül. Ha a gyerek megéhezik, elfárad vagy éppen nincs kedve együttműködni, az is belefér. Szünetet tartunk, aztán tovább játszunk."}, {"number": "04", "title": "ELKÉSZÜLNEK A KÉPEK", "text": "Először egy válogatást látsz, kiválasztod a kedvenceidet, majd megkapod a gondosan kidolgozott képeket digitális formában, teljes felbontásban."}], "gallery": ["images/galeria-01.jpg", "images/galeria-02.png", "images/galeria-03.jpg", "images/galeria-04.jpg", "images/galeria-05.jpg", "images/galeria-06.jpg"], "faq": [{"q": "Mennyi időt szánjunk rá?", "a": "Számoljatok körülbelül 45–90 perccel, a gyerek életkorától és a helyszíntől függően. A kicsiknél ez gyakran két rövidebb szakaszra bomlik, mert hamarabb elfáradnak."}, {"q": "Mi legyen a gyereken?", "a": "Valami, amiben jól érzi magát. Az egyszerű színű, kényelmes ruha a legjobb: nem szorít, nem csúszik el, és nem vonja el a figyelmet az arcáról. Több váltásruhát is hozhattok, ha szeretnétek változatosabb képeket."}, {"q": "Mi van, ha a gyerek nem működik együtt?", "a": "Ez a leggyakoribb dolog a világon, és egyáltalán nem probléma. Nem erőltetem a pózokat, és nem kérem, hogy mosolyogjon. Hagyom, hogy felfedezze a helyszínt, és a képek játék közben készülnek el."}, {"q": "Hol fotózunk?", "a": "Ott, ahol a gyerek a leginkább otthon van: a lakásban, a kertben, a nagyszülőknél, a kedvenc játszótéren vagy egy olyan helyen, ami hozzátok tartozik. Ha nincs ötletetek, szívesen javaslok néhány helyszínt."}, {"q": "Milyen formában kapjuk meg a képeket?", "a": "Digitálisan, teljes felbontásban, nyomtatásra is alkalmas méretben. Előtte egy válogatást láttok, és ti választjátok ki, melyik képek készüljenek el végleges formában."}, {"q": "Lehet saját, telefonnal készült képet is küldeni?", "a": "Igen. A digitális háttércseréhez e-mailben elküldhetitek a gyermek fotóját. Megnézem a képet, és jelzem, hogy alkalmas-e a kívánt végeredményhez."}, {"q": "Kérhető nyomtatott kép is?", "a": "Igen. A digitális háttércsere mellé kérhető 50 × 40 cm-es, prémium fotópapírra nyomtatott kép, amelyet becsomagolva házhoz is szállítok."}]};
-
-(function(){
-const d=window.SITE_DATA;
-const $=s=>document.querySelector(s);
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
-$('#hero-eyebrow').textContent=d.hero.eyebrow;
-$('#hero-title').innerHTML=esc(d.hero.title).replace(/(ha művé válik\.)/,'<i>$1</i>');
-$('#hero-text').textContent=d.hero.text;
-$('#about-image').src=d.about.image;
-$('#about-title').innerHTML=esc(d.about.title).replace(/(hanem megvárom\.)/,'<i>$1</i>');
-$('#about-text').innerHTML=d.about.text.split('\n\n').map(x=>`<p>${esc(x)}</p>`).join('');
-$('#services-list').innerHTML=d.services.map(s=>{let visual=s.before?`<div class="before-after"><figure><img src="${s.before}" alt="Előtte"><figcaption>ELŐTTE</figcaption></figure><figure><img src="${s.after}" alt="Utána"><figcaption>UTÁNA</figcaption></figure><figure><img src="${s.before2}" alt="Előtte"><figcaption>ELŐTTE</figcaption></figure><figure><img src="${s.after2}" alt="Utána"><figcaption>UTÁNA</figcaption></figure></div>`:`<div class="service-main"><img src="${s.image}" alt="${esc(s.title)}"></div>`;return `<article class="service"><div class="service-copy"><span class="number">${esc(s.number)}</span><h3>${esc(s.title)}</h3><p><b>${esc(s.lead)}</b></p><p>${esc(s.text)}</p><div class="price">${esc(s.price)}</div>${s.extra?`<div class="extra">${esc(s.extra)}</div>`:''}</div>${visual}</article>`}).join('');
-$('#process-list').innerHTML=d.process.map(p=>`<div class="step"><b>${p.number}</b><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></div>`).join('');
-$('#gallery-grid').innerHTML=d.gallery.map((x,i)=>`<a href="${x}" target="_blank" rel="noopener"><img src="${x}" alt="Ádám Sándor Fotós – gyermekfotó ${i+1}"></a>`).join('');
-$('#faq-list').innerHTML=d.faq.map(f=>`<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join('');
-})();
-fetch('content/site.json', {cache:'no-store'})
-  .then(r => r.json())
+fetch('content/site.json', { cache: 'no-store' })
+  .then(response => {
+    if (!response.ok) throw new Error('A tartalom nem tölthető be.');
+    return response.json();
+  })
   .then(d => {
-    document.querySelector('.brand b').textContent = d.site.name;
-    document.querySelector('.brand small').textContent = d.site.role;
-    document.querySelector('#hero-title').textContent = d.hero.title;
-  });
+    const $ = selector => document.querySelector(selector);
+
+    const esc = value =>
+      String(value ?? '').replace(/[&<>"]/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
+      }[char]));
+
+    if ($('.brand b')) $('.brand b').textContent = d.site.name;
+    if ($('.brand small')) $('.brand small').textContent = d.site.role;
+
+    if ($('#hero-eyebrow')) $('#hero-eyebrow').textContent = d.hero.eyebrow;
+    if ($('#hero-title')) {
+      $('#hero-title').innerHTML = esc(d.hero.title).replace(
+        /(A pillanatok megmaradnak\.)$/, '<i>$1</i>'
+      );
+    }
+    if ($('#hero-text')) $('#hero-text').textContent = d.hero.text;
+
+    if ($('#about-image')) {
+      $('#about-image').src = d.about.image;
+      $('#about-image').alt = 'Ádám Sándor Fotós';
+    }
+    if ($('#about-title')) {
+      $('#about-title').innerHTML = esc(d.about.title).replace(
+        /(hanem megvárom\.)$/, '<i>$1</i>'
+      );
+    }
+    if ($('#about-text')) {
+      $('#about-text').innerHTML = String(d.about.text ?? '')
+        .split(/\n\s*\n/)
+        .map(p => `<p>${esc(p)}</p>`).join('');
+    }
+
+    if ($('#services-list')) {
+      $('#services-list').innerHTML = (d.services || []).map(s => {
+        const visual = s.before ? `
+          <div class="before-after">
+            <figure><img src="${esc(s.before)}" alt="Előtte"><figcaption>ELŐTTE</figcaption></figure>
+            <figure><img src="${esc(s.after)}" alt="Utána"><figcaption>UTÁNA</figcaption></figure>
+            <figure><img src="${esc(s.before2)}" alt="Előtte"><figcaption>ELŐTTE</figcaption></figure>
+            <figure><img src="${esc(s.after2)}" alt="Utána"><figcaption>UTÁNA</figcaption></figure>
+          </div>` : `
+          <div class="service-main">
+            <img src="${esc(s.image)}" alt="${esc(s.title)}">
+          </div>`;
+
+        return `
+          <article class="service">
+            <div class="service-copy">
+              <span class="number">${esc(s.number)}</span>
+              <h3>${esc(s.title)}</h3>
+              <p><b>${esc(s.lead)}</b></p>
+              <p>${esc(s.text)}</p>
+              <div class="price">${esc(s.price)}</div>
+              ${s.extra ? `<div class="extra">${esc(s.extra)}</div>` : ''}
+            </div>
+            ${visual}
+          </article>`;
+      }).join('');
+    }
+
+    if ($('#process-list')) {
+      $('#process-list').innerHTML = (d.process || []).map(p => `
+        <div class="step">
+          <b>${esc(p.number)}</b>
+          <h3>${esc(p.title)}</h3>
+          <p>${esc(p.text)}</p>
+        </div>`).join('');
+    }
+
+    if ($('#gallery-grid')) {
+      $('#gallery-grid').innerHTML = (d.gallery || []).map((image, i) => `
+        <a href="${esc(image)}" target="_blank" rel="noopener">
+          <img src="${esc(image)}" alt="Ádám Sándor Fotós – gyermekfotó ${i + 1}">
+        </a>`).join('');
+    }
+
+    if ($('#faq-list')) {
+      $('#faq-list').innerHTML = (d.faq || []).map(f => `
+        <details>
+          <summary>${esc(f.q)}</summary>
+          <p>${esc(f.a)}</p>
+        </details>`).join('');
+    }
+  })
+  .catch(error => console.error('CMS tartalom betöltési hiba:', error));
