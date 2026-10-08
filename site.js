@@ -20,4 +20,5 @@ fetch('content/site.json', {cache:'no-store'})
   .then(d => {
     document.querySelector('.brand b').textContent = d.site.name;
     document.querySelector('.brand small').textContent = d.site.role;
+    document.querySelector('#hero-title').textContent = d.hero.title;
   });
